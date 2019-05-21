@@ -24,10 +24,17 @@
       <h3>Deliver my taco masterpieces to...</h3>
       <label for="name">Name: </label>
       <input type="text" th:field="*{name}"/>
-<!-- end::allButValidation[] -->
-      <span class="validationError"
+            <span class="validationError"
             th:if="${#fields.hasErrors('name')}"
             th:errors="*{name}">Name Error</span>
+            <br/>
+      
+      <label for="secondName">Second name: </label>
+      <input type="text" th:field="*{secondName}"/>
+<!-- end::allButValidation[] -->
+      <span class="validationError"
+            th:if="${#fields.hasErrors('secondName')}"
+            th:errors="*{secondName}">Second Name Error</span>
 <!-- tag::allButValidation[] -->
       <br/>
 

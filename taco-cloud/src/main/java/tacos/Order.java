@@ -17,6 +17,9 @@ public class Order {
   //tag::allButValidation[]
   private String name;
   //end::allButValidation[]
+  
+  @NotBlank(message="Second name is required")
+  private String secondName;
 
   @NotBlank(message="Street is required")
   //tag::allButValidation[]
@@ -115,6 +118,14 @@ public String getCcCVV() {
 
 public void setCcCVV(String ccCVV) {
 	this.ccCVV = ccCVV;
+}
+
+public String getSecondName() {
+	return secondName;
+}
+
+public void setSecondName(String secondName) {
+	this.secondName = secondName;
 }
   
 
