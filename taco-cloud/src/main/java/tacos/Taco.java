@@ -1,6 +1,7 @@
 // tag::all[]
 // tag::allButValidation[]
 package tacos;
+import java.util.Date;
 import java.util.List;
 
 // end::allButValidation[]
@@ -12,8 +13,24 @@ import lombok.Data;
 
 @Data
 public class Taco {
+	
+	private Long id;
+	
+	private Date createdAt;
 
-  // end::allButValidation[]
+  public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+// end::allButValidation[]
   @NotNull
   @Size(min=5, message="Name must be at least 5 characters long")
   // tag::allButValidation[]
