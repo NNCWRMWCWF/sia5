@@ -1,6 +1,8 @@
 //tag::all[]
 //tag::allButValidation[]
 package tacos;
+import java.util.Date;
+
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
@@ -11,6 +13,10 @@ import lombok.Data;
 
 @Data
 public class Order {
+	
+	private Long id;
+	
+	private Date createdAt;
 
   //end::allButValidation[]
   @NotBlank(message="Name is required")
