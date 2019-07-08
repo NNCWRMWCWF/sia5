@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import lombok.extern.slf4j.Slf4j;
 import tacos.Ingredient.Type;
 import tacos.data.IngredientRepository;
+import tacos.data.TacoRepository;
 
 @Slf4j
 @Controller
@@ -28,10 +29,12 @@ import tacos.data.IngredientRepository;
 public class DesignTacoController {
 	
 	private IngredientRepository ingredientRepo;
+	private TacoRepository tacoRepository;
 	
 	@Autowired
-	public DesignTacoController(IngredientRepository ingredientRepo) {
+	public DesignTacoController(IngredientRepository ingredientRepo, TacoRepository tacoRepository) {
 		this.ingredientRepo = ingredientRepo;
+		this.tacoRepository = tacoRepository;
 	}
 	
 	@GetMapping
