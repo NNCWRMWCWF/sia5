@@ -21,8 +21,9 @@ public class Taco {
   public Long getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public Taco setId(Long id) {
 		this.id = id;
+		return this;
 	}
 	public Date getCreatedAt() {
 		return createdAt;
