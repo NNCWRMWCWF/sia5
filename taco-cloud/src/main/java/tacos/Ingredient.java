@@ -16,14 +16,6 @@ public class Ingredient {
 	public final Type type;
 	
 	
-	
-	public Ingredient(String id, String name, Type type) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.type = type;
-	}
-	
 	private Ingredient() {
 		this.id = null;
 		this.name = null;
