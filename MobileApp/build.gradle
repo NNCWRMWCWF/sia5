@@ -16,8 +16,4 @@ jar {
 	baseName= 'MobileApp'
 	version= '0.1.0'
 }
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '1.11'
-}
 	

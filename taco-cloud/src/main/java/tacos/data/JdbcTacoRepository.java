@@ -1,5 +1,12 @@
 package tacos.data;
 
+import java.sql.Types;
+import java.util.Date;
+
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.core.PreparedStatementCreatorFactory;
+
+import tacos.Ingredient;
 import java.sql.Timestamp;
 import java.sql.Types;
 import java.util.Arrays;
@@ -11,9 +18,11 @@ import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.PreparedStatementCreatorFactory;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Repository;
 
 import tacos.Taco;
 
+@Repository
 public class JdbcTacoRepository implements TacoRepository {
 	
 	JdbcTemplate jdbcTemplate;
